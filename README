@@ -10,6 +10,8 @@
     
     * CUDA capable graphic device
 
+    * yum install -y yaml-cpp yaml-cpp-devel glog glog-devel gflags gflags-devel cmake freeglut-devel freeglut 
+	- openGL provided by nvidia driver (it appears, in centos7)
 - Installation:
 
 You should make sure that cmake and the required libraries are installed on your system. If you are in the 'bin' directory of the project, compiling the project should be done this way:
