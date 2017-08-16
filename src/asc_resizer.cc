@@ -17,14 +17,14 @@ static bool validateGridsize(const char* flagname, int value)
 
 DEFINE_int32(gridsize, 512, "gridsize for new file.");
 
-static const bool gridsize_dummy = google::RegisterFlagValidator(&FLAGS_gridsize, &validateGridsize);
+static const bool gridsize_dummy = gflags::RegisterFlagValidator(&FLAGS_gridsize, &validateGridsize);
 
 int main(int argc, char ** argv)
 {
     google::InitGoogleLogging(argv[0]);
     google::InstallFailureSignalHandler();
 
-    google::ParseCommandLineFlags(&argc, &argv, true);
+    gflags::ParseCommandLineFlags(&argc, &argv, true);
 
     // checking command line arguments
     if (argc < 2)
