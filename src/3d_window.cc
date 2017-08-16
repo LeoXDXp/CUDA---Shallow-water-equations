@@ -90,11 +90,11 @@ DEFINE_double(zoom, 30, "distance from scene");
 DEFINE_int32(maxfps, 30, "maximum frames per second.");
 DEFINE_int32(mode, SURFACE_MODE, "display mode: surface = 0, wireframe = 1, points = 2");
 
-static const bool maxfps_dummy = google::RegisterFlagValidator(&FLAGS_maxfps, &validateMaxFPS);
-static const bool mode_dummy = google::RegisterFlagValidator(&FLAGS_mode, &validateMode);
-static const bool rotx_dummy = google::RegisterFlagValidator(&FLAGS_rotx, &validateAngle);
-static const bool roty_dummy = google::RegisterFlagValidator(&FLAGS_roty, &validateAngle);
-static const bool zoom_dummy = google::RegisterFlagValidator(&FLAGS_zoom, &validateZoom);
+static const bool maxfps_dummy = gflags::RegisterFlagValidator(&FLAGS_maxfps, &validateMaxFPS);
+static const bool mode_dummy = gflags::RegisterFlagValidator(&FLAGS_mode, &validateMode);
+static const bool rotx_dummy = gflags::RegisterFlagValidator(&FLAGS_rotx, &validateAngle);
+static const bool roty_dummy = gflags::RegisterFlagValidator(&FLAGS_roty, &validateAngle);
+static const bool zoom_dummy = gflags::RegisterFlagValidator(&FLAGS_zoom, &validateZoom);
 
 GLuint heightmap[2];
 GLuint watersurface[2];
