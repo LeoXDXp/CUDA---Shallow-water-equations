@@ -3,14 +3,14 @@
     * CMake (http://www.cmake.org/)
     * Google logging library (http://code.google.com/p/google-glog/)
     * Google flags library (http://code.google.com/p/google-gflags/)
-    * YAML c++ parser library (http://code.google.com/p/yaml-cpp/)
+    * YAML c++ parser library (http://code.google.com/p/yaml-cpp/) Version 0.3 or 0.4. v0.5 uses new API
     * Nvidia CUDA (http://www.nvidia.com/)
     * OpenGL (http://www.opengl.org/)
     * GLUT (http://www.opengl.org/resources/libraries/glut/)
     
     * CUDA capable graphic device
 
-    * yum install -y yaml-cpp yaml-cpp-devel glog glog-devel gflags gflags-devel cmake freeglut-devel freeglut 
+    * yum install -y yaml-cpp03 yaml-cpp03-devel glog glog-devel gflags gflags-devel cmake freeglut-devel freeglut 
 	- openGL provided by nvidia driver (it appears, in centos7)
 - Installation:
 
