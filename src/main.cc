@@ -47,9 +47,9 @@ DEFINE_int32(simulate, 0, "execution steps, without graphic output. (0 = with gr
 DEFINE_int32(wspf, 50, "wavesteps per frame.");
 DEFINE_int32(kernelflops, 0, "Flops per kernel");
 
-static const bool gridsize_dummy = google::RegisterFlagValidator(&FLAGS_gridsize, &validateGridsize);
-static const bool simulate_dummy = google::RegisterFlagValidator(&FLAGS_simulate, &validateSimulate);
-static const bool wspf_dummy = google::RegisterFlagValidator(&FLAGS_wspf, &validateWSPF);
+static const bool gridsize_dummy = gflags::RegisterFlagValidator(&FLAGS_gridsize, &validateGridsize);
+static const bool simulate_dummy = gflags::RegisterFlagValidator(&FLAGS_simulate, &validateSimulate);
+static const bool wspf_dummy = gflags::RegisterFlagValidator(&FLAGS_wspf, &validateWSPF);
 
 int gridsize;
 int simulate;
@@ -125,7 +125,7 @@ int main(int ac, char ** av)
     google::InitGoogleLogging(argv[0]);
     google::InstallFailureSignalHandler();
 
-    google::ParseCommandLineFlags(&argc, &argv, true);
+    gflags::ParseCommandLineFlags(&argc, &argv, true);
 
     gridsize = FLAGS_gridsize;
     simulate = FLAGS_simulate;
