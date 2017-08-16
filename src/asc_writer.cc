@@ -32,7 +32,7 @@ static bool validateNorm(const char* flagname, int value)
 
 DEFINE_int32(norm, 1, "norm factor for height data, see README file");
 
-static const bool norm_dummy = google::RegisterFlagValidator(&FLAGS_norm, &validateNorm);
+static const bool norm_dummy = gflags::RegisterFlagValidator(&FLAGS_norm, &validateNorm);
 
 void writeASC(const char* filename, int &heightmapdim, int &fitdim, float*& heightmap)
 {
