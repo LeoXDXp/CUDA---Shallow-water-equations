@@ -12,7 +12,7 @@ include_directories(${GFLAGS_INCLUDE_DIR})
 #find_package(YAMLCPP REQUIRED)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(YAML_CPP REQUIRED yaml-cpp03)
-include_directories(${YAMLCPP_INCLUDE_DIR})
+#include_directories(${YAMLCPP_INCLUDE_DIR})
 
 find_package(CUDA REQUIRED)
 include_directories(${CUDA_INCLUDE_DIRS})
