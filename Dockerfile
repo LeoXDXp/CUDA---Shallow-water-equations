@@ -5,7 +5,7 @@ RUN yum update -y && yum install -y epel-release && yum install -y git cmake yam
 RUN git clone --depth 1 https://github.com/LeoXDXp/CUDA---Shallow-water-equations.git /mnt && cd /mnt/bin/ && cmake .. && make -j4
 
 FROM nvidia/cuda:8.0-runtime-centos7
-RUN yum install -y epel-release && yum install -y glog gflags yaml-cpp03 freeglut
+RUN yum install -y epel-release && yum install -y glog gflags yaml-cpp03 freeglut libXmu libXi
 COPY --from=base /mnt/bin/swegpu /usr/local/bin/
 COPY --from=base /mnt/res/*.yaml /tmp/
 WORKDIR /tmp
